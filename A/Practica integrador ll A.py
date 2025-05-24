@@ -1,5 +1,4 @@
 #A. Operaciones con DNIs
-
 #Ingreso de los DNIs (reales o ficticios).
 dni1 = 12444356
 dni2 = 43524123
