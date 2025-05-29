@@ -1,176 +1,176 @@
 #A. Operaciones con DNIs
 #Ingreso de los DNIs (reales o ficticios).
 
-dni1 = 46582392
-dni2 = 43524123
-dni3 = 41906566
-dni4 = 45406120
+dniA = 46582392
+dniB = 43524123
+dniC = 41906566
+dniD = 45406120
 
 #Generación automática de los conjuntos de dígitos únicos.
 
-digitos_dni1 = set(map(int, str(dni1)))  
-digitos_dni2 = set(map(int, str(dni2)))  
-digitos_dni3 = set(map(int, str(dni3)))  
-digitos_dni4 = set(map(int, str(dni4)))  
+digitos_dniA = set(map(int, str(dniA)))  
+digitos_dniB = set(map(int, str(dniB)))  
+digitos_dniC = set(map(int, str(dniC)))  
+digitos_dniD = set(map(int, str(dniD)))  
 
-print("DNI 1:", dni1, "->", digitos_dni1)
-print("DNI 2:", dni2, "->", digitos_dni2)
-print("DNI 3:", dni3, "->", digitos_dni3)
-print("DNI 4:", dni4, "->", digitos_dni4)
+print("DNI A:", dniA, "->", digitos_dniA)
+print("DNI B:", dniB, "->", digitos_dniB)
+print("DNI C:", dniC, "->", digitos_dniC)
+print("DNI D:", dniD, "->", digitos_dniD)
 
 #Cálculo y visualización de: unión, intersección, diferencias y diferencia simétrica.
 
-union12 = digitos_dni1 | digitos_dni2
-union13 = digitos_dni1 | digitos_dni3
-union32 = digitos_dni3 | digitos_dni2
-union14 = digitos_dni1 | digitos_dni4
-union24 = digitos_dni2 | digitos_dni4
-union34 = digitos_dni3 | digitos_dni4
+unionAB = digitos_dniA | digitos_dniB
+unionAC = digitos_dniA | digitos_dniC
+unionCB = digitos_dniC | digitos_dniB
+unionAD = digitos_dniA | digitos_dniD
+unionBD = digitos_dniB | digitos_dniD
+unionCD = digitos_dniC | digitos_dniD
 
-print("Unión 1-2:", union12)
-print("Unión 1-3:", union13)
-print("Unión 3-2:", union32)
-print("Unión 1-4:", union14)
-print("Unión 2-4:", union24)
-print("Unión 3-4:", union34)
+print("Unión A-B:", unionAB)
+print("Unión A-C:", unionAC)
+print("Unión C-B:", unionCB)
+print("Unión A-D:", unionAD)
+print("Unión B-D:", unionBD)
+print("Unión C-D:", unionCD)
 
-interseccion12 = digitos_dni1 & digitos_dni2
-interseccion13 = digitos_dni1 & digitos_dni3
-interseccion32 = digitos_dni3 & digitos_dni2
-interseccion13 = digitos_dni1 & digitos_dni3
-interseccion23 = digitos_dni2 & digitos_dni3
-interseccion43 = digitos_dni4 & digitos_dni3
+interseccionAB = digitos_dniA & digitos_dniB
+interseccionAC = digitos_dniA & digitos_dniC
+interseccionCB = digitos_dniC & digitos_dniB
+interseccionAC = digitos_dniA & digitos_dniC
+interseccionBC = digitos_dniB & digitos_dniC
+interseccionDC = digitos_dniD & digitos_dniC
 
-print("Intersección 1-2:", interseccion12)
-print("Intersección 1-3:", interseccion13)
-print("Intersección 3-2:", interseccion32)
-print("Intersección 1-3:", interseccion13)
-print("Intersección 2-3:", interseccion23)
-print("Intersección 4-3:", interseccion43)
+print("Intersección A-B:", interseccionAB)
+print("Intersección A-C:", interseccionAC)
+print("Intersección C-B:", interseccionCB)
+print("Intersección A-C:", interseccionAC)
+print("Intersección B-C:", interseccionBC)
+print("Intersección D-C:", interseccionDC)
 
-diferencia_1_2 = digitos_dni1 - digitos_dni2
-diferencia_1_3 = digitos_dni1 - digitos_dni3
-diferencia_1_4 = digitos_dni1 - digitos_dni4
-diferencia_2_3 = digitos_dni2 - digitos_dni3
-diferencia_2_1 = digitos_dni2 - digitos_dni1
-diferencia_2_4 = digitos_dni2 - digitos_dni4
-diferencia_3_2 = digitos_dni3 - digitos_dni2
-diferencia_3_1 = digitos_dni3 - digitos_dni1
-diferencia_3_4 = digitos_dni3 - digitos_dni4
-diferencia_4_1 = digitos_dni4 - digitos_dni1
-diferencia_4_2 = digitos_dni4 - digitos_dni2
-diferencia_4_3 = digitos_dni4 - digitos_dni3
+diferencia_A_B = digitos_dniA - digitos_dniB
+diferencia_A_C = digitos_dniA - digitos_dniC
+diferencia_A_D = digitos_dniA - digitos_dniD
+diferencia_B_C = digitos_dniB - digitos_dniC
+diferencia_B_A = digitos_dniB - digitos_dniA
+diferencia_B_D = digitos_dniB - digitos_dniD
+diferencia_C_B = digitos_dniC - digitos_dniB
+diferencia_C_A = digitos_dniC - digitos_dniA
+diferencia_C_D = digitos_dniC - digitos_dniD
+diferencia_D_A = digitos_dniD - digitos_dniA
+diferencia_D_B = digitos_dniD - digitos_dniB
+diferencia_D_C = digitos_dniD - digitos_dniC
 
-print("Diferencia (DNI1 - DNI2):", diferencia_1_2)
-print("Diferencia (DNI1 - DNI3):", diferencia_1_3)
-print("Diferencia (DNI1 - DNI4):", diferencia_1_4)
-print("Diferencia (DNI2 - DNI3):", diferencia_2_3)
-print("Diferencia (DNI2 - DNI1):", diferencia_2_1)
-print("Diferencia (DNI2 - DNI4):", diferencia_2_4)
-print("Diferencia (DNI3 - DNI2):", diferencia_3_2)
-print("Diferencia (DNI3 - DNI1):", diferencia_3_1)
-print("Diferencia (DNI3 - DNI4):", diferencia_3_4)
-print("Diferencia (DNI4 - DNI1):", diferencia_4_1)
-print("Diferencia (DNI4 - DNI2):", diferencia_4_2)
-print("Diferencia (DNI4 - DNI3):", diferencia_4_3)
+print("Diferencia (DNIA - DNIB):", diferencia_A_B)
+print("Diferencia (DNIA - DNIC):", diferencia_A_C)
+print("Diferencia (DNIA - DNID):", diferencia_A_D)
+print("Diferencia (DNIB - DNIC):", diferencia_B_C)
+print("Diferencia (DNIB - DNIA):", diferencia_B_A)
+print("Diferencia (DNIB - DNID):", diferencia_B_D)
+print("Diferencia (DNIC - DNIB):", diferencia_C_B)
+print("Diferencia (DNIC - DNIA):", diferencia_C_A)
+print("Diferencia (DNIC - DNID):", diferencia_C_D)
+print("Diferencia (DNID - DNIA):", diferencia_D_A)
+print("Diferencia (DNID - DNIB):", diferencia_D_B)
+print("Diferencia (DNID - DNIC):", diferencia_D_C)
 
-diferencia_simetrica12 = digitos_dni1 ^ digitos_dni2
-diferencia_simetrica13 = digitos_dni1 ^ digitos_dni3
-diferencia_simetrica32 = digitos_dni3 ^ digitos_dni2
-diferencia_simetrica41 = digitos_dni4 ^ digitos_dni1
-diferencia_simetrica42 = digitos_dni4 ^ digitos_dni2
-diferencia_simetrica43 = digitos_dni4 ^ digitos_dni3
+diferencia_simetricaAB = digitos_dniA ^ digitos_dniB
+diferencia_simetricaAC = digitos_dniA ^ digitos_dniC
+diferencia_simetricaCB = digitos_dniC ^ digitos_dniB
+diferencia_simetricaDA = digitos_dniD ^ digitos_dniA
+diferencia_simetricaDB = digitos_dniD ^ digitos_dniB
+diferencia_simetricaDC = digitos_dniD ^ digitos_dniC
 
-print("Diferencia simétrica 1-2:", diferencia_simetrica12)
-print("Diferencia simétrica 1-3:", diferencia_simetrica13)
-print("Diferencia simétrica 3-2:", diferencia_simetrica32)
-print("Diferencia simétrica 4-1:", diferencia_simetrica41)
-print("Diferencia simétrica 4-2:", diferencia_simetrica42)
-print("Diferencia simétrica 4-3:", diferencia_simetrica43)
+print("Diferencia simétrica A-B:", diferencia_simetricaAB)
+print("Diferencia simétrica A-C:", diferencia_simetricaAC)
+print("Diferencia simétrica C-B:", diferencia_simetricaCB)
+print("Diferencia simétrica D-A:", diferencia_simetricaDA)
+print("Diferencia simétrica D-B:", diferencia_simetricaDB)
+print("Diferencia simétrica D-C:", diferencia_simetricaDC)
 
 
 #Conteo de frecuencia de cada dígito en cada DNI utilizando estructuras repetitivas.
-frecuencia_dni1 = {}
-frecuencia_dni2 = {}
-frecuencia_dni3 = {}
-frecuencia_dni4 = {}
+frecuencia_dniA = {}
+frecuencia_dniB = {}
+frecuencia_dniC = {}
+frecuencia_dniD = {}
 
-for digito in str(dni1):
+for digito in str(dniA):
     d = int(digito)
-    if d in frecuencia_dni1:
-        frecuencia_dni1[d] += 1
+    if d in frecuencia_dniA:
+        frecuencia_dniA[d] += 1
     else:
-        frecuencia_dni1[d] = 1
+        frecuencia_dniA[d] = 1
 
-for digito in str(dni2):
+for digito in str(dniB):
     d = int(digito)
-    if d in frecuencia_dni2:
-        frecuencia_dni2[d] += 1
+    if d in frecuencia_dniB:
+        frecuencia_dniB[d] += 1
     else:
-        frecuencia_dni2[d] = 1
+        frecuencia_dniB[d] = 1
 
-for digito in str(dni3):
+for digito in str(dniC):
     d = int(digito)
-    if d in frecuencia_dni3:
-        frecuencia_dni3[d] += 1
+    if d in frecuencia_dniC:
+        frecuencia_dniC[d] += 1
     else:
-        frecuencia_dni3[d] = 1
+        frecuencia_dniC[d] = 1
 
-for digito in str(dni4):
+for digito in str(dniD):
     d = int(digito)
-    if d in frecuencia_dni4:
-        frecuencia_dni4[d] += 1
+    if d in frecuencia_dniD:
+        frecuencia_dniD[d] += 1
     else:
-        frecuencia_dni4[d] = 1
+        frecuencia_dniD[d] = 1
 
-print("Frecuencia de dígitos en DNI 1:", frecuencia_dni1)
-print("Frecuencia de dígitos en DNI 2:", frecuencia_dni2)
-print("Frecuencia de dígitos en DNI 3:", frecuencia_dni3)
-print("Frecuencia de dígitos en DNI 4:", frecuencia_dni4)
+print("Frecuencia de dígitos en DNI A:", frecuencia_dniA)
+print("Frecuencia de dígitos en DNI B:", frecuencia_dniB)
+print("Frecuencia de dígitos en DNI C:", frecuencia_dniC)
+print("Frecuencia de dígitos en DNI D:", frecuencia_dniD)
 
 #Suma total de los dígitos de cada DNI.
 
-suma_dni1 = 0
-suma_dni2 = 0
-suma_dni3 = 0
-suma_dni4 = 0
+suma_dniA = 0
+suma_dniB = 0
+suma_dniC = 0
+suma_dniD = 0
 
-for digito in str(dni1):
-    suma_dni1 += int(digito)
+for digito in str(dniA):
+    suma_dniA += int(digito)
 
-for digito in str(dni2):
-    suma_dni2 += int(digito)
+for digito in str(dniB):
+    suma_dniB += int(digito)
 
-for digito in str(dni3):
-    suma_dni3 += int(digito)
+for digito in str(dniC):
+    suma_dniC += int(digito)
 
-for digito in str(dni4):
-    suma_dni4 += int(digito)
+for digito in str(dniD):
+    suma_dniD += int(digito)
 
-print("Suma de los dígitos del DNI 1:", suma_dni1)
-print("Suma de los dígitos del DNI 2:", suma_dni2)
-print("Suma de los dígitos del DNI 3:", suma_dni3)
-print("Suma de los dígitos del DNI 4:", suma_dni4)
+print("Suma de los dígitos del DNI A:", suma_dniA)
+print("Suma de los dígitos del DNI B:", suma_dniB)
+print("Suma de los dígitos del DNI C:", suma_dniC)
+print("Suma de los dígitos del DNI D:", suma_dniD)
 
 
 #Evaluación de condiciones lógicas (condicionales), vinculadas con las expresiones escritas.
 
 #Comparacion de la suna de digitos
 
-if suma_dni1 > suma_dni2 and suma_dni1 > suma_dni3 and suma_dni1 > suma_dni4:
-    print("La suma de los dígitos del DNI 1 es mayor.")
-elif suma_dni2 > suma_dni1 and suma_dni2 > suma_dni3 and suma_dni2 > suma_dni4:
-    print("La suma de los dígitos del DNI 2 es mayor.")
-elif suma_dni3 > suma_dni1 and suma_dni3 > suma_dni2 and suma_dni3 > suma_dni4:
-    print("La suma de los dígitos del DNI 3 es mayor.")
-elif suma_dni4 > suma_dni1 and suma_dni4 > suma_dni2 and suma_dni4 > suma_dni3:
-    print("La suma de los dígitos del DNI 4 es mayor.")
+if suma_dniA > suma_dniB and suma_dniA > suma_dniC and suma_dniA > suma_dniD:
+    print("La suma de los dígitos del DNI A es mayor.")
+elif suma_dniB > suma_dniA and suma_dniB > suma_dniC and suma_dniB > suma_dniD:
+    print("La suma de los dígitos del DNI B es mayor.")
+elif suma_dniC > suma_dniA and suma_dniC > suma_dniB and suma_dniC > suma_dniD:
+    print("La suma de los dígitos del DNI C es mayor.")
+elif suma_dniD > suma_dniA and suma_dniD > suma_dniB and suma_dniD > suma_dniC:
+    print("La suma de los dígitos del DNI D es mayor.")
 else:
     print("Hay al menos dos DNI con la suma de dígitos igual y mayor.")
 
 #Interseccion total de digitos 
 
-interseccion_total = digitos_dni1 & digitos_dni2 & digitos_dni3 & digitos_dni4
+interseccion_total = digitos_dniA & digitos_dniB & digitos_dniC & digitos_dniD
 if interseccion_total:
     print("Dígito/s compartido/s entre todos los DNIs:", interseccion_total)
 else:
@@ -187,7 +187,7 @@ def evaluar_diversidad(digitos_unicos, dni_num):
     else:
         print(f"DNI {dni_num}: Diversidad numérica baja ({cantidad} dígitos distintos)")
 # Evaluar cada DNI
-evaluar_diversidad(digitos_dni1, 1)
-evaluar_diversidad(digitos_dni2, 2)
-evaluar_diversidad(digitos_dni3, 3)
-evaluar_diversidad(digitos_dni4, 4)
+evaluar_diversidad(digitos_dniA, 1)
+evaluar_diversidad(digitos_dniB, 2)
+evaluar_diversidad(digitos_dniC, 3)
+evaluar_diversidad(digitos_dniD, 4)
