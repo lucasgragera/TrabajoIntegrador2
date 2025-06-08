@@ -17,62 +17,39 @@ print("DNI A:", dniA, "->", digitos_dniA)
 print("DNI B:", dniB, "->", digitos_dniB)
 print("DNI C:", dniC, "->", digitos_dniC)
 print("DNI D:", dniD, "->", digitos_dniD)
+print('')
 
 #Cálculo y visualización de: unión, intersección, diferencias y diferencia simétrica.
 
-unionAB = digitos_dniA | digitos_dniB
-unionAC = digitos_dniA | digitos_dniC
-unionCB = digitos_dniC | digitos_dniB
-unionAD = digitos_dniA | digitos_dniD
-unionBD = digitos_dniB | digitos_dniD
-unionCD = digitos_dniC | digitos_dniD
+print("Union DNI A-B:", digitos_dniA.union(digitos_dniB))
+print("Union DNI A-C:", digitos_dniA.union(digitos_dniC))
+print("Union DNI C-B:", digitos_dniC.union(digitos_dniB))
+print("Union DNI A-D:", digitos_dniA.union(digitos_dniD))
+print("Union DNI B-D:", digitos_dniB.union(digitos_dniD))
+print("Union DNI C-D:", digitos_dniC.union(digitos_dniD))
+print('')
 
-print("Unión A-B:", unionAB)
-print("Unión A-C:", unionAC)
-print("Unión C-B:", unionCB)
-print("Unión A-D:", unionAD)
-print("Unión B-D:", unionBD)
-print("Unión C-D:", unionCD)
+print("Interseccion DNI A-B:", digitos_dniA.intersection(digitos_dniB))
+print("Interseccion DNI A-C:", digitos_dniA.intersection(digitos_dniC))
+print("Interseccion DNI C-B:", digitos_dniC.intersection(digitos_dniB))
+print("Interseccion DNI A-C:", digitos_dniA.intersection(digitos_dniC))
+print("Interseccion DNI B-C:", digitos_dniB.intersection(digitos_dniC))
+print("Interseccion DNI D-C:", digitos_dniD.intersection(digitos_dniC))
+print('')
 
-interseccionAB = digitos_dniA & digitos_dniB
-interseccionAC = digitos_dniA & digitos_dniC
-interseccionCB = digitos_dniC & digitos_dniB
-interseccionAC = digitos_dniA & digitos_dniC
-interseccionBC = digitos_dniB & digitos_dniC
-interseccionDC = digitos_dniD & digitos_dniC
-
-print("Intersección A-B:", interseccionAB)
-print("Intersección A-C:", interseccionAC)
-print("Intersección C-B:", interseccionCB)
-print("Intersección A-C:", interseccionAC)
-print("Intersección B-C:", interseccionBC)
-print("Intersección D-C:", interseccionDC)
-
-diferencia_A_B = digitos_dniA - digitos_dniB
-diferencia_A_C = digitos_dniA - digitos_dniC
-diferencia_A_D = digitos_dniA - digitos_dniD
-diferencia_B_C = digitos_dniB - digitos_dniC
-diferencia_B_A = digitos_dniB - digitos_dniA
-diferencia_B_D = digitos_dniB - digitos_dniD
-diferencia_C_B = digitos_dniC - digitos_dniB
-diferencia_C_A = digitos_dniC - digitos_dniA
-diferencia_C_D = digitos_dniC - digitos_dniD
-diferencia_D_A = digitos_dniD - digitos_dniA
-diferencia_D_B = digitos_dniD - digitos_dniB
-diferencia_D_C = digitos_dniD - digitos_dniC
-
-print("Diferencia (DNIA - DNIB):", diferencia_A_B)
-print("Diferencia (DNIA - DNIC):", diferencia_A_C)
-print("Diferencia (DNIA - DNID):", diferencia_A_D)
-print("Diferencia (DNIB - DNIC):", diferencia_B_C)
-print("Diferencia (DNIB - DNIA):", diferencia_B_A)
-print("Diferencia (DNIB - DNID):", diferencia_B_D)
-print("Diferencia (DNIC - DNIB):", diferencia_C_B)
-print("Diferencia (DNIC - DNIA):", diferencia_C_A)
-print("Diferencia (DNIC - DNID):", diferencia_C_D)
-print("Diferencia (DNID - DNIA):", diferencia_D_A)
-print("Diferencia (DNID - DNIB):", diferencia_D_B)
-print("Diferencia (DNID - DNIC):", diferencia_D_C)
+print("Diferencia DNI A-B:", digitos_dniA.difference(digitos_dniB))
+print("Diferencia DNI A-C:", digitos_dniA.difference(digitos_dniC))
+print("Diferencia DNI A-D:", digitos_dniA.difference(digitos_dniD))
+print("Diferencia DNI B-C:", digitos_dniB.difference(digitos_dniC))
+print("Diferencia DNI B-A:", digitos_dniB.difference(digitos_dniA))
+print("Diferencia DNI B-D:", digitos_dniB.difference(digitos_dniD))
+print("Diferencia DNI C-B:", digitos_dniC.difference(digitos_dniB))
+print("Diferencia DNI C-A:", digitos_dniC.difference(digitos_dniA))
+print("Diferencia DNI C-D:", digitos_dniC.difference(digitos_dniD))
+print("Diferencia DNI D-A:", digitos_dniD.difference(digitos_dniA))
+print("Diferencia DNI D-B:", digitos_dniD.difference(digitos_dniB))
+print("Diferencia DNI D-C:", digitos_dniD.difference(digitos_dniC))
+print('')
 
 diferencia_simetricaAB = digitos_dniA ^ digitos_dniB
 diferencia_simetricaAC = digitos_dniA ^ digitos_dniC
@@ -87,6 +64,7 @@ print("Diferencia simétrica C-B:", diferencia_simetricaCB)
 print("Diferencia simétrica D-A:", diferencia_simetricaDA)
 print("Diferencia simétrica D-B:", diferencia_simetricaDB)
 print("Diferencia simétrica D-C:", diferencia_simetricaDC)
+print('')
 
 
 #Conteo de frecuencia de cada dígito en cada DNI utilizando estructuras repetitivas.
@@ -127,6 +105,7 @@ print("Frecuencia de dígitos en DNI A:", frecuencia_dniA)
 print("Frecuencia de dígitos en DNI B:", frecuencia_dniB)
 print("Frecuencia de dígitos en DNI C:", frecuencia_dniC)
 print("Frecuencia de dígitos en DNI D:", frecuencia_dniD)
+print('')
 
 #Suma total de los dígitos de cada DNI.
 
@@ -151,7 +130,7 @@ print("Suma de los dígitos del DNI A:", suma_dniA)
 print("Suma de los dígitos del DNI B:", suma_dniB)
 print("Suma de los dígitos del DNI C:", suma_dniC)
 print("Suma de los dígitos del DNI D:", suma_dniD)
-
+print('')
 
 #Evaluación de condiciones lógicas (condicionales), vinculadas con las expresiones escritas.
 
@@ -167,6 +146,7 @@ elif suma_dniD > suma_dniA and suma_dniD > suma_dniB and suma_dniD > suma_dniC:
     print("La suma de los dígitos del DNI D es mayor.")
 else:
     print("Hay al menos dos DNI con la suma de dígitos igual y mayor.")
+print('')
 
 #Interseccion total de digitos 
 
@@ -175,6 +155,7 @@ if interseccion_total:
     print("Dígito/s compartido/s entre todos los DNIs:", interseccion_total)
 else:
     print("No hay dígito compartido entre todos los DNIs.")
+print('')
 
 # Evaluar diversidad numérica basada en cantidad de dígitos distintos
 
@@ -186,6 +167,7 @@ def evaluar_diversidad(digitos_unicos, dni_num):
         print(f"DNI {dni_num}: Diversidad numérica media ({cantidad} dígitos distintos)")
     else:
         print(f"DNI {dni_num}: Diversidad numérica baja ({cantidad} dígitos distintos)")
+
 # Evaluar cada DNI
 evaluar_diversidad(digitos_dniA, 1)
 evaluar_diversidad(digitos_dniB, 2)
